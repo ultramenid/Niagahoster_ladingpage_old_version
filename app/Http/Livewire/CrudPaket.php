@@ -69,6 +69,9 @@ class CrudPaket extends Component
         $this->readyToLoad = true;
     }
 
+    public function closeUpdate(){
+        $this->isUpdate = false;
+    }
     public function render()
     {
         return view('livewire.crud-paket', [

@@ -13,7 +13,7 @@
 
         @endif --}}
 
-        <div x-data="{ open: @entangle('isCreating') }">
+        <div x-data="{ open: false }">
             {{-- <button @click="open = true">Show More...</button> --}}
             <button @click="open = true" class="border border-gray-500 hover:border-gray-600 text-gray-600 hover:text-gray-900 w-20 px-1 text-center rounded">
                 Create
@@ -23,12 +23,9 @@
             </div>
         </div>
 
-        <div x-data="{ edit: @entangle('isUpdate') }">
-            <div x-show="edit" @click.away="edit = false">
-                @include('livewire.modal.updateHarga')
-            </div>
-        </div>
-
+        @if ($isUpdate)
+            @include('livewire.modal.updateHarga')
+        @endif
 
         <div class="flex flex-col py-5">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
