@@ -42,8 +42,8 @@ return [
     |
     */
 
-    'asset_url'  => 'http://127.0.0.1/tallstarter/public',
-    // 'asset_url' => null,
+    // 'asset_url'  => 'http://127.0.0.1/tallstarter/public',
+    'asset_url' => null,
 
     /*
     |--------------------------------------------------------------------------
