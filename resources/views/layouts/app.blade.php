@@ -18,7 +18,7 @@
 
         @livewireScripts
         <script src="{{ asset('js/app.js') }}" defer data-turbolinks-suppress-warning></script>
-        <script src="{{asset('js/adapter.js')}}" data-turbolinks-eval="false"></script>
+        <script src="{{ asset('js/adapter.js')}}" data-turbolinks-eval="false"></script>
         </head>
 
     <body class="bg-gray-50">
