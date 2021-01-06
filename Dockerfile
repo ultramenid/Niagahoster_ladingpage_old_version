@@ -3,8 +3,9 @@ FROM php:7.4-fpm-alpine
 RUN docker-php-ext-install pdo pdo_mysql
 RUN curl -sS https://getcomposer.org/installer | php -- \
         --install-dir=/usr/local/bin --filename=composer
-RUN apt-get install -y gnupg2
-RUN apt-get install nodejs -y
+
+RUN apk update
+RUN apk add nodejs
 
 WORKDIR /app
 COPY . .
